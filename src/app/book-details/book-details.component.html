@@ -1,3 +1,20 @@
-<p>
-  book-details works!
-</p>
+<h2>Details zu {{book.title}}</h2>
+
+<div class="row">
+	<div class="col-md-2 col-xs-6"><strong>Rating</strong></div>
+	<div class="col-md-8 col-xs-6">{{book.rating}}</div>
+</div>
+<div class="row">
+	<div class="col-md-2 col-xs-6"><strong>ISBN</strong></div>
+	<div class="col-md-8 col-xs-6">{{book.isbn}}</div>
+</div>
+<div class="row">
+	<div class="col-md-2 col-xs-6"><strong>Description</strong></div>
+	<div class="col-md-8 col-xs-6">{{book.description}}</div>
+</div>
+
+<div style="margin-top: 1em">
+	<a routerLink="/">
+		<span class="glyphicon glyphicon-fast-backward"></span> zur Übersicht
+	</a>
+</div>

@@ -3,12 +3,12 @@
 		<div class="row">
 			<div class="col-xs-1"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></div>
 			<div class="col-xs-7">
-				<strong>{{book.title}} 
+				<strong><a [routerLink]="['/book', book.isbn]">{{book.title}}</a>
 					<span title="Rating" 
 						[ngClass]="{'label-info': book.rating>0 && book.rating<8, 'label-success': book.rating>=8, 'label-danger': book.rating==0 }" 
 						class="label">{{book.rating}}</span></strong>
-				<button class="btn btn-xs btn-default" (click)="rateUp()">+1</button>
-				<button class="btn btn-xs btn-default" (click)="rateDown()">-1</button>
+				<button class="btn btn-xs btn-default glyphicon glyphicon-thumbs-up" (click)="rateUp()"></button>
+				<button class="btn btn-xs btn-default glyphicon glyphicon-thumbs-down" (click)="rateDown()"></button>
 			</div>
 			<div title="ISBN for order" class="col-xs-4 text-right">{{book.isbn}}
 				<a href="http://www.amazon.de/dp/ASIN/?tag={{book.isbn}}" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span></a>

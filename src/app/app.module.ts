@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
 
+import { AppRoutingModule } from './app.routing';
+
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+
+import { BookService } from './book.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,10 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ToastModule
+    ToastModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
