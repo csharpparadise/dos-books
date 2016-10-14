@@ -1,4 +1,16 @@
-<div class=book>
-	<h3>{{book.title}} ({{book.rating}}) // <small>{{book.isbn}}</small></h3>
-	<p>{{book.description}}</p>
+<div class="panel panel-default book">
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-1"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></div>
+			<div class="col-xs-7">
+				<strong>{{book.title}} <span title="Rating" class="label label-info">{{book.rating}}</span></strong>
+				<button class="btn btn-xs btn-default" (click)="rateUp()">+</button>
+				<button class="btn btn-xs btn-default" (click)="rateDown()">-</button>
+			</div>
+			<div title="ISBN for order" class="col-xs-4 text-right">{{book.isbn}}
+				<a href="http://www.amazon.de/dp/ASIN/?tag={{book.isbn}}" target="_blank"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+			</div>
+		</div>
+		<p class="row col-xs-offset-1"><em>{{book.description}}</em></p>
+	</div>
 </div>

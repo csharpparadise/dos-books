@@ -7,9 +7,17 @@ import { Book } from '../shared/book';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-  @Input()book: Book;
+  @Input() book: Book;
 
   ngOnInit() {
   }
 
+  rateUp() {
+    this.book.rating++;
+  }
+
+  rateDown() {
+    if (this.book.rating === 0) { return; }
+    this.book.rating--;
+  }
 }
