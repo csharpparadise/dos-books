@@ -16,9 +16,12 @@
       "mobile": false,
       "styles": [
         "styles.css", 
-        "../node_modules/bootstrap/dist/css/bootstrap.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/ng2-toastr/ng2-toastr.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/ng2-toastr/bundle/ng2-toastr.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

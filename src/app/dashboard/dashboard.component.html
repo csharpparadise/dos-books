@@ -3,5 +3,5 @@
 </h3>
 
 <div *ngFor="let b of books">
-	<devos-book [book]="b"></devos-book>
+	<devos-book [book]="b" (rated)="reorderBooks($event)"></devos-book>
 </div>
