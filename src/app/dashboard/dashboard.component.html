@@ -1,9 +1,13 @@
-<p>
+<h3>
   Books
-</p>
+</h3>
 
-<ul>
-  <li *ngFor="let b of books">
-    {{b.title}}  //  ISBN: {{b.isbn}} Rating {{b.rating}} of 10
-  </li>
-</ul>
+<!--<ul>
+	<li *ngFor="let b of books">
+		{{b.title}} // ISBN: {{b.isbn}} Rating {{b.rating}} of 10
+	</li>
+</ul>-->
+
+  <div *ngFor="let b of books">
+    <devos-book [book]="b"></devos-book>
+  </div>
